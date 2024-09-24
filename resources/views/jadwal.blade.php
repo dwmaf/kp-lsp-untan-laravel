@@ -11,12 +11,12 @@
                 <div class="col-md-4 my-2">
                     <div class="card jadwal">
                         <div class="card-body jadwal-body">
-                            @if (\Carbon\Carbon::now()->lessThanOrEqualTo(\Carbon\Carbon::parse($jadwal->daftar_berakhir)))
+                            {{-- @if (\Carbon\Carbon::now()->lessThanOrEqualTo(\Carbon\Carbon::parse($jadwal->daftar_berakhir)))
                                 <span class="badge bg-success">Pendaftaran dibuka</span>
                             @else
                                 <span class="badge bg-warning">Pendaftaran sudah ditutup</span>
                             @endif
-                            <br>
+                            <br> --}}
                             <h5 class="card-title jadwal-title"><i class="fas fa-book"></i> {{ $jadwal->skema->nama_skema }}
                             </h5>
                             <p><i class="fas fa-calendar-alt"></i> Pendaftaran:

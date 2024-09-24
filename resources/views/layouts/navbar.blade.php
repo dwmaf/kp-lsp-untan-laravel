@@ -9,8 +9,12 @@
     <meta name="author" content="" />
     <title>LSP UNTAN</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/user-navbar.css">
     <script src="/js/scripts.js"></script>
     <script src="/js/datatables-simple-demo.js"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -37,7 +41,7 @@
                             href="/asesor">Asesor</a></li>
                     <li class="nav-item"><a class="nav-link {{ Request::is('jadwal') ? 'active' : '' }}"
                             href="/jadwal">Jadwal</a></li>
-                    <li class="nav-item"><a class="nav-link {{ Request::is('berita') ? 'active' : '' }}"
+                    <li class="nav-item"><a class="nav-link {{ Request::is('berita*') ? 'active' : '' }}"
                             href="/berita">Berita</a></li>
                     <li class="daftar-padding nav-item  "><a class="daftar btn btn-primary position-relative"
                             href="https://forms.gle/87wbLb7Qk2MVoc8g8">Daftar
@@ -73,33 +77,33 @@
                         <!-- Footer Social Icons-->
                         <div class="col-lg-6 mb-5 mb-lg-0">
                             <h4 class="text-uppercase mb-4 fw-bolder">Kontak Kami</h4>
-                            
-                                @if ($nowa[0]['value'] !== 'kosong')
-                                    <a class="btn btn-outline-light btn-social mx-1" target="_blank"
-                                        href="http://wa.me/{{ $nowa[0]['value'] }}">
-                                        <i class="fa-brands fa-whatsapp"></i>
-                                    </a>
-                                @endif
-                                @if ($fb[0]['value'] !== 'kosong')
-                                    <a class="btn btn-outline-light btn-social mx-1" href=""><i
-                                            class="fab fa-fw fa-facebook-f"></i></a>
-                                @endif
+
+                            @if ($nowa[0]['value'] !== 'kosong')
+                                <a class="btn btn-outline-light btn-social mx-1" target="_blank" {{-- href="http://wa.me/{{ $nowa[0]['value'] }}" --}}
+                                    href="/">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            @endif
+                            @if ($fb[0]['value'] !== 'kosong')
+                                <a class="btn btn-outline-light btn-social mx-1" href="/"><i
+                                        class="fab fa-fw fa-facebook-f"></i></a>
+                            @endif
 
 
-                                @if ($x[0]['value'] !== 'kosong')
-                                    <a class="btn btn-outline-light btn-social mx-1" href=""><i
-                                            class="fab fa-fw fa-twitter"></i></a>
-                                @endif
-                                @if ($linkedin[0]['value'] !== 'kosong')
-                                    <a class="btn btn-outline-light btn-social mx-1" href=""><i
-                                            class="fab fa-fw fa-linkedin-in"></i></a>
-                                @endif
-                                @if ($ig[0]['value'] !== 'kosong')
-                                    <a class="btn btn-outline-light btn-social mx-1" href="">
-                                        <i class="fab fa-fw fa-instagram-f"></i>
-                                    </a>
-                                @endif
-                            
+                            @if ($x[0]['value'] !== 'kosong')
+                                <a class="btn btn-outline-light btn-social mx-1" href="/"><i
+                                        class="fab fa-fw fa-twitter"></i></a>
+                            @endif
+                            @if ($linkedin[0]['value'] !== 'kosong')
+                                <a class="btn btn-outline-light btn-social mx-1" href="/"><i
+                                        class="fab fa-fw fa-linkedin-in"></i></a>
+                            @endif
+                            @if ($ig[0]['value'] !== 'kosong')
+                                <a class="btn btn-outline-light btn-social mx-1" href="/">
+                                    <i class="fab fa-fw fa-instagram"></i>
+                                </a>
+                            @endif
+
 
 
                         </div>

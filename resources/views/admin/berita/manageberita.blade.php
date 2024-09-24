@@ -26,7 +26,7 @@
                     <tr>
                         <td >{{ $loop->iteration}}</td>
                         <td >{{ $berita->judul_berita }}</td>
-                        <td >{{ $berita->created_at }}</td>
+                        <td >{{ \Carbon\Carbon::parse($berita->created_at)->format('d M Y') }}</td>
                         <td >
                             <a class="btn btn-primary" href="/admin/berita/{{ $berita->id }}"><i class="fa-solid fa-eye"></i></a>
                             <a class=" btn btn-warning" href="/admin/berita/{{ $berita->id }}/edit" ><i class="fa-solid fa-pen-to-square"></i></a>

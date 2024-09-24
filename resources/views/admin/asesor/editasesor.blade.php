@@ -11,7 +11,7 @@
             @method('put')
             @csrf
             <div class="form-floating mb-3">
-                <input class="form-control" class="@error('nama_asesor') @enderror" name="nama_asesor" id="nama_asesor" type="text" value="{{ $asesor->nama_asesor }}"/>
+                <input class="form-control" class="@error('nama_asesor') @enderror" name="nama_asesor" id="nama_asesor" type="text" value="{{ $asesor->nama_asesor }}" required/>
                 @error('nama_asesor')
                     <div class="">{{ $message }}</div>
                 @enderror
@@ -29,7 +29,7 @@
                 </select>
                 <label for="nama_skema">Skema</label>
             </div>
-            <button type="submit" class="btn btn-primary">Edit</button>
+            <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
 </div>

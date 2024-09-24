@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Alamat;
 use App\Http\Requests\StoreAlamatRequest;
 use App\Http\Requests\UpdateAlamatRequest;
+use Illuminate\Http\Request;
 
 class AlamatController extends Controller
 {
@@ -27,7 +28,7 @@ class AlamatController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreAlamatRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class AlamatController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateAlamatRequest $request, Alamat $alamat)
+    public function update(Request $request, Alamat $alamat)
     {
         //
     }

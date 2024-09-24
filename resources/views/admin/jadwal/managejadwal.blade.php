@@ -11,7 +11,7 @@
         Daftar Jadwal Sertifikasi
     </div>
     <div class="card-body">
-        <a class="btn btn-primary mb-3" href="/admin/jadwal/create" ><i class="fa-solid fa-plus"></i> Tambah asesor baru</a>
+        <a class="btn btn-primary mb-3" href="/admin/jadwal/create" ><i class="fa-solid fa-plus"></i> Tambah jadwal baru</a>
         <table id="datatablesSimple">
             <thead>
                     <tr>
