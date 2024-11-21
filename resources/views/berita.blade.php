@@ -8,7 +8,7 @@
 <div class="container-fluid px-4 mt-4" >
     <div class="row">
         @foreach ($beritas as $berita)
-        <div class="col-md-4">
+        <div class="col-md-4 mb-3">
             <div class="card jadwal">
                 {{-- <img src="{{ cloudinary()->getUrl($berita->image_public_id)}}" alt="Berita Image" class="card-img-top"> --}}
                 <img src="{{ asset('storage/'.$berita->link_foto) }}" alt="no-image" class="card-img-top ">
