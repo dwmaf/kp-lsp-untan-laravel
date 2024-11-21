@@ -52,10 +52,6 @@
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-users-line"></i></div>
                             Asesor
                         </a>
-                        {{-- <a class="nav-link {{ Request::is('admin/unitkompetensi*') ? 'active' : '' }}" href="/admin/unitkompetensi">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-users-line"></i></div>
-                                Unit Kompetensi
-                            </a> --}}
                         <a class="nav-link {{ Request::is('admin/berita*') ? 'active' : '' }}" href="/admin/berita">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-newspaper"></i></div>
                             Berita
@@ -74,10 +70,7 @@
 
                     </div>
                 </div>
-                {{-- <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
-                    </div> --}}
+                
             </nav>
         </div>
 
@@ -92,11 +85,6 @@
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
                         <div class="text-muted">Copyright &copy; LSP UNTAN</div>
-                        {{-- <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div> --}}
                     </div>
                 </div>
             </footer>

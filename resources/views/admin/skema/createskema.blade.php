@@ -22,17 +22,4 @@
     </div>
 </div>
 
-    {{-- <div class="px-5">
-        <h1 class="text-3xl py-4">Tambah skema baru</h1>
-        <a href="/admin/skema" class="text-cyan-700 hover:underline py-4">Kembali ke daftar skema</a>
-        <form method="POST" action="/admin/skema" class="flex-col flex max-w-80">
-            @csrf
-            <label for="nama_skema">Skema</label>
-            <input type="text" class="@error('nama_skema') @enderror" name="nama_skema" id="nama_skema" placeholder="isi nama skema" autofocus required>
-            @error('nama_skema')
-                <div class="">{{ $message }}</div>
-            @enderror
-            <button type="submit" class="text-cyan-700">Tambah</button>
-        </form>
-    </div> --}}
 @endsection

@@ -120,7 +120,7 @@
                             <h5 class="card-title fw-bolder">{{ $berita->judul_berita }}</h5>
                             <h6 class="">{{ \Carbon\Carbon::parse($berita->created_at)->format('j M Y') }}</h6>
                             <p>{{ $berita->excerpt }}</p>
-                            <a href="/berita/{{ $berita->id }}">Read more...</a>
+                            <a class="aberita" href="/berita/{{ $berita->id }}">Read more...</a>
                         </div>
                     </div>
                 </div>

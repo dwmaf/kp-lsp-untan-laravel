@@ -6,7 +6,7 @@
         <img src="{{ asset('storage/'.$berita[0]['link_foto']) }}" alt="no-image" >
         <div class="card-body">
             <h5 class="card-title">{{ $berita[0]['judul_berita'] }}</h5>
-            <h6 class="">{{ $berita[0]['created_at'] }}</h6>
+            <h6 class="">{{ \Carbon\Carbon::parse($berita[0]['created_at'])->format('j M Y') }}</h6>
             <p>{!! $berita[0]['konten_berita'] !!}</p>
         </div>
     </div>

@@ -18,9 +18,11 @@
     <script src="/js/scripts.js"></script>
     <script src="/js/datatables-simple-demo.js"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-</head>
+    
+</head> 
 
 <body class="sb-nav-fixed">
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
             <a href="/">
@@ -31,7 +33,7 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link {{ Request::is('') ? 'active' : '' }}"
+                    <li class="nav-item"><a class="nav-link {{ Request::is('/') ? 'active' : '' }}"
                             href="/">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link {{ Request::is('profile') ? 'active' : '' }}"
                             href="/profile">Profile</a></li>
@@ -54,54 +56,79 @@
         </div>
     </nav>
 
-    <div id="layoutSidenav_content" class="bg-light">
+    <div id="layoutSidenav_content" class="bg-light ">
         <main>
             {{-- content child di sini --}}
             @yield('child')
         </main>
-        <footer class="sd-sidenav-footer text-center mt-5">
-            <div class="py-5 bg-primary text-white">
+        <footer class="sd-sidenav-footer  mt-5">
+            <div class="py-5 bg-lspuntan text-white">
                 <div class="container">
-
-                    <div class="row">
+                    <div class="row g-3">
                         <!-- Footer Location-->
-                        <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="col-md mb-4">
                             <h4 class="text-uppercase mb-4 fw-bolder">alamat
-
                             </h4>
                             <p class="lead mb-0">
                                 {{ $alamat[0]['alamat'] }}
 
                             </p>
                         </div>
+                        <!-- Footer Site Map-->
+                        <div class="col-md mb-4 text-start">
+                            <h4 class="mb-4 fw-bolder">LSP UNTAN</h4>
+                            
+                            <div class="row">
+                                <div class="col-6 col-md-12">
+                                    <p class="lead mb-3"><a href="/">Beranda</a></p>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p class="lead mb-3"><a href="/profile">Profile</a></p>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p class="lead mb-3"><a href="/skema">Skema</a></p>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p class="lead mb-3"><a href="/asesor">Asesor</a></p>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p class="lead mb-3"><a href="/jadwal">Jadwal</a></p>
+                                </div>
+                                <div class="col-6 col-md-12">
+                                    <p class="lead mb-3"><a href="/berita">Berita</a></p>
+                                </div>
+                            </div>
+                            
+                        </div>
                         <!-- Footer Social Icons-->
-                        <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="col-md mb-4 text-start">
                             <h4 class="text-uppercase mb-4 fw-bolder">Kontak Kami</h4>
-
                             @if ($nowa[0]['value'] !== 'kosong')
-                                <a class="btn btn-outline-light btn-social mx-1" target="_blank" {{-- href="http://wa.me/{{ $nowa[0]['value'] }}" --}}
+                                {{-- <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="http://wa.me/{{ $nowa[0]['value'] }}"
                                     href="/">
                                     <i class="fa-brands fa-whatsapp"></i>
-                                </a>
+                                </a> --}}
+                                <p class="lead mb-3">
+
+                                    <a target="_blank" href="/">Whatsapp</a>
+                                </p>
                             @endif
                             @if ($fb[0]['value'] !== 'kosong')
-                                <a class="btn btn-outline-light btn-social mx-1" href="/"><i
-                                        class="fab fa-fw fa-facebook-f"></i></a>
-                            @endif
+                                {{-- <a class="btn btn-outline-light btn-social mx-1" href="/"><i
+                                        class="fab fa-fw fa-facebook-f"></i></a> --}}
+                                        <p class="lead mb-3">
 
-
-                            @if ($x[0]['value'] !== 'kosong')
-                                <a class="btn btn-outline-light btn-social mx-1" href="/"><i
-                                        class="fab fa-fw fa-twitter"></i></a>
-                            @endif
-                            @if ($linkedin[0]['value'] !== 'kosong')
-                                <a class="btn btn-outline-light btn-social mx-1" href="/"><i
-                                        class="fab fa-fw fa-linkedin-in"></i></a>
+                                            <a target="_blank" href="/">Facebook</a>
+                                        </p>
                             @endif
                             @if ($ig[0]['value'] !== 'kosong')
-                                <a class="btn btn-outline-light btn-social mx-1" href="/">
+                                {{-- <a class="btn btn-outline-light btn-social mx-1" href="/">
                                     <i class="fab fa-fw fa-instagram"></i>
-                                </a>
+                                </a> --}}
+                                <p class="lead mb-3">
+
+                                    <a target="_blank" href="/">Instagram</a>
+                                </p>
                             @endif
 
 
@@ -113,7 +140,7 @@
             </div>
         </footer>
         <!-- Copyright Section-->
-        <div class="copyright py-4 text-center bg-dark text-white">
+        <div class="copyright py-4  text-start bg-lspuntan text-white">
             <div class="container"><small>Copyright &copy; LSP UNTAN</small></div>
         </div>
     </div>
